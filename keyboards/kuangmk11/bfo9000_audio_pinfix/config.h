@@ -29,6 +29,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 0
 
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 250U
+
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
@@ -57,6 +60,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define AUDIO_PWM_CHANNEL RP2040_PWM_CHANNEL_A
 #define AUDIO_INIT_DELAY
 #define AUDIO_CLICKY
+#define DAC_SAMPLE_MAX 65535U
+
+
 
 #ifdef AUDIO_ENABLE
     #define STARTUP_SONG SONG(PREONIC_SOUND)

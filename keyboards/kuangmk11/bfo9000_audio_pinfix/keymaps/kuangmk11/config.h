@@ -31,4 +31,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 // #define EE_HANDS
 #define DYNAMIC_KEYMAP_LAYER_COUNT 3
-#define DAC_SAMPLE_MAX 65535U
