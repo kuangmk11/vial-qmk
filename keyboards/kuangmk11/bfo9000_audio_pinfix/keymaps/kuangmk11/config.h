@@ -23,6 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VIAL_UNLOCK_COMBO_ROWS { 0, 2 }
 #define VIAL_UNLOCK_COMBO_COLS { 0, 5 }
 #define MIDI_ADVANCED
+#define SENDSTRING_BELL
 //#define SEQUENCER_STEPS 16   //By default the sequencer has 16 steps
 
 //#define USE_I2C
