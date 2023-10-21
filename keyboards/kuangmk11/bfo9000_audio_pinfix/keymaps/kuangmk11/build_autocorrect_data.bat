@@ -1,0 +1,1 @@
+C:/Users/ono/AppData/Local/Microsoft/WindowsApps/python3.11.exe g:/Keyboards/vial-qmk/keyboards/kuangmk11/bfo9000_audio_pinfix/keymaps/kuangmk11/make_autocorrection_data.py g:/Keyboards/vial-qmk/keyboards/kuangmk11/bfo9000_audio_pinfix/keymaps/kuangmk11/autocorrection_dict.txt

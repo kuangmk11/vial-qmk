@@ -4,6 +4,7 @@
 AUDIO_DRIVER = pwm_hardware
 AUDIO_ENABLE = yes           # Audio output
 AUTOCORRECT_ENABLE = yes
+AUTO_SHIFT_ENABLE = yes
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 BOOTMAGIC_ENABLE = yes       # Enable Bootmagic Lite
 COMMAND_ENABLE = yes        # Commands for debug and configuration
@@ -14,14 +15,9 @@ LTO_ENABLE = yes
 MOUSEKEY_ENABLE = yes       # Mouse keys
 MIDI_ENABLE = yes
 NKRO_ENABLE = yes            # Enable N-Key Rollover
-RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight.
+RGBLIGHT_ENABLE = yes       # Enable WS2812 RGB underlight.
 SEND_STRING_ENABLE = yes
 SEQUENCER_ENABLE = no
 SERIAL_DRIVER = vendor
 SPLIT_KEYBOARD = yes
-
-
-
-
-
 

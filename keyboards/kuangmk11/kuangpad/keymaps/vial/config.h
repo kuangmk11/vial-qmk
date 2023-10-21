@@ -10,3 +10,7 @@
 // #define MASTER_RIGHT
 // #define EE_HANDS
 #define DYNAMIC_KEYMAP_LAYER_COUNT 8
+
+//By default, these are set to 0 and 0, which is usually the "ESC" key on a majority of keyboards.
+#define BOOTMAGIC_LITE_ROW 0
+#define BOOTMAGIC_LITE_COLUMN 0

@@ -8,7 +8,10 @@ void keyboard_post_init_user(void) {
   //debug_mouse=true;
   #ifdef AUTOCORRECT_ENABLE
     autocorrect_enable();
-#endif
+  #endif
+  #ifdef AUTO_SHIFT_ENABLE
+    autoshift_enable();
+  #endif
 };
 
 
@@ -52,7 +55,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
       case TO(0):
           if (record->event.pressed) {
-            autocorrect_enable();
+            #ifdef AUTOCORRECT_ENABLE
+                autocorrect_enable();
+            #endif
+            #ifdef AUTO_SHIFT_ENABLE
+                autoshift_enable();
+            #endif
             #ifdef AUDIO_ENABLE
             PLAY_SONG(song0);
             #endif
@@ -61,6 +69,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       case TO(1):
         if (record->event.pressed) {
             autocorrect_disable();
+            autoshift_disable();
             #ifdef AUDIO_ENABLE
             PLAY_SONG(song1);
             #endif
@@ -69,6 +78,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       case TO(2):
         if (record->event.pressed) {
             autocorrect_disable();
+            autoshift_disable();
             #ifdef AUDIO_ENABLE
             PLAY_SONG(song2);
             #endif
@@ -78,7 +88,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   // If console is enabled, it will print the matrix position and status of each key pressed
   #ifdef CONSOLE_ENABLE
   uprintf("KL: kc: 0x%04X, col: %2u, row: %2u, pressed: %u, time: %5u, int: %u, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
-  #endif 
+  #endif
   return true;
 };
 
@@ -215,9 +225,9 @@ bool apply_autocorrect(uint8_t backspaces, const char *str, char *typo, char *co
 
 //Custom Keycodes
 enum custom_keycode {
-    QMK_AC_ON = QK_USER_0, 
-    QMK_AC_OFF, 
-    QMK_AC_TOGG 
+    QMK_AC_ON = QK_USER_0,
+    QMK_AC_OFF,
+    QMK_AC_TOGG
 };
 
 //Layer Definitions
